@@ -1,0 +1,11 @@
+/vendor/
+/.env
+.DS_Store
+node_modules/
+*.log
+/storage/*
+!storage/.gitignore
+.idea/
+.vscode/
+*.bak
+*.sql
