@@ -12,7 +12,6 @@ class App
     public function __construct()
     {
         $url = $this->parseURL();
-        print_r($url);
 
         $controllerName = ucfirst(strtolower($url[0] ?? 'home')) . 'Controller';
         $controllerClass = "App\\Controllers\\$controllerName";
@@ -36,7 +35,6 @@ class App
         $this->params = array_values($url);
 
         call_user_func_array([$this->controller, $this->method], $this->params);
-        print_r($url);
     }
 
     public function parseURL()
